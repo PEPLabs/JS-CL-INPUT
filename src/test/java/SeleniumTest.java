@@ -1,6 +1,6 @@
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 import java.io.File;
 import java.time.Duration;
 import java.util.Arrays;
@@ -20,8 +20,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.logging.LogType;
 import org.openqa.selenium.logging.LoggingPreferences;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class SeleniumTest {
     private WebDriver webDriver;
@@ -38,7 +38,7 @@ public class SeleniumTest {
     private static final boolean IS_LINUX = OS_NAME.contains("linux");
     private static final boolean IS_MAC = OS_NAME.contains("mac");
   
-    @BeforeEach
+    @Before
     public void setUp() {
         try {
             printEnvironmentInfo();
@@ -529,7 +529,7 @@ public class SeleniumTest {
         }
     }
 
-    @AfterEach
+    @After
     public void tearDown() {
         System.out.println("\n=== TEARDOWN ===");
         cleanup();
