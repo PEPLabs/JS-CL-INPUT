@@ -264,11 +264,7 @@ public class SeleniumTest {
     
     private File findHtmlFile() {
         String[] possibleHtmlPaths = {
-            "src/main/Callbacks.html",
-            "Callbacks.html",
-            "src/test/resources/Callbacks.html",
-            "test-resources/Callbacks.html",
-            "src/main/resources/Callbacks.html"
+            "src/main/HelloUser.html"
         };
         
         for (String htmlPath : possibleHtmlPaths) {
@@ -279,7 +275,7 @@ public class SeleniumTest {
             }
         }
         
-        throw new RuntimeException("Could not find Callbacks.html in any expected location: " + 
+        throw new RuntimeException("Could not find HelloUser.html in any expected location: " + 
             Arrays.toString(possibleHtmlPaths));
     }
     
