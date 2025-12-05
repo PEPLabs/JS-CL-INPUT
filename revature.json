@@ -1,0 +1,25 @@
+{
+  "type": "java",
+  "testFiles": [
+    {
+      "path": "src/test/java/SeleniumTest.java",
+      "testCases": [
+        {
+          "methodName": "testNoName",
+          "label": "Greet with empty name",
+          "description": "Clicks submit without entering a name and asserts that the text element with id 'text' displays 'Hello,'."
+        },
+        {
+          "methodName": "testShortName",
+          "label": "Greet with short name",
+          "description": "Enters the short name 'Rick' into the input with id 'input', clicks submit, and asserts that the text element with id 'text' displays 'Hello, Rick'."
+        },
+        {
+          "methodName": "testLongName",
+          "label": "Greet with long name",
+          "description": "Enters a long full name into the input with id 'input', clicks submit, and asserts that the text element with id 'text' displays the full greeting with the entire name."
+        }
+      ]
+    }
+  ]
+}
